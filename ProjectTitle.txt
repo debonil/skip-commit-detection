@@ -1,0 +1,27 @@
+M21AIE246	Debonil Ghosh	
+M21AIE247	Ravi Shankar Kumar	
+
+"A Machine Learning Approach to Improve the Detection of CI Skip Commits"	
+
+Paper Abstract (100 words)
+
+"Abstract—Continuous integration (CI) frameworks, such as Travis CI, are growing in popularity, encouraged by market trends towards
+speeding up the release cycle and building higher-quality software. A key facilitator of CI is to automatically build and run tests
+whenever a new commit is submitted/pushed. Despite the many advantages of using CI, it is known that the CI process can take a very
+long time to complete. One of the core causes for such delays is the fact that some commits (e.g., cosmetic changes) unnecessarily
+kick off the CI process. Therefore, the main goal of this paper is to automate the process of determining which commits can be CI
+skipped through the use of machine learning techniques. We first extracted 23 features from historical data of ten software repositories.
+Second, we conduct a study on the detection of CI skip commits using machine learning where we built a decision tree classifier. We
+then examine the accuracy of using the decision tree in detecting CI skip commits. Our results show that the decision tree can identify
+CI skip commits with an average AUC equal to 0.89. Furthermore, the top node analysis shows that the number of developers who
+changed the modified files, the CI-Skip rules, and commit message are the most important features to detect CI skip commits. Finally,
+we investigate the generalizability of identifying CI skip commits through applying cross-project validation, and our results show that the
+general classifier achieves an average 0.74 of AUC values."	
+
+Project Abstract (100 words)
+
+In today's world going to market faster is extremly important and if we are not able to do so becuase of running longer and longer pipeline cycles for small & small changes in UI or some very minor bug fixes. The paper has tried to solve this problem by using Decision Tree algorithm of Machine Learning. Since this is extremly desired in today's world to make CI-CD pipleine more intelligent that they do not just follow a scheuld or they do not just follow a trigger of push & merge but they be more intelligent and to make them intelligent we have to use AI\ML but in this paper they have used Decision Tree but we think that if we use some other Model which are more efficient in processing human language then may be we can improve the solution proposed in this paper.
+
+https://ieeexplore.ieee.org/abstract/document/8961089	
+
+IEEE TRANSACTIONS ON SOFTWARE ENGINEERING	2021	approved	Approved. 		
