@@ -1,7 +1,7 @@
 curl \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer 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" \
-  https://api.github.com/repos/debonil/HHT/commits
+  https://api.github.com/repos/ebay/parallec/commits?page=4
 
 
 
