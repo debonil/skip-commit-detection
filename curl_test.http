@@ -1,0 +1,12 @@
+curl \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer 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" \
+  https://api.github.com/repos/debonil/HHT/commits
+
+
+
+
+curl \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer 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" \
+  https://api.github.com/repos/debonil/HHT/commits/6c0d8e7dec579b238d12fb91091e6826bd9ddb9d
