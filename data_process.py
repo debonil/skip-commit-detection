@@ -15,6 +15,8 @@ list_merge_words =  [ 'Merge','merge','merged']
 
 list_format= ['formated','format','formatting']
 
+version_words =  [ 'version','Version']
+
 list_comment= ['commented','comment','commenting','comments']
 
 all_messages = []
@@ -187,7 +189,7 @@ def map_to_df(commit_dict:GitCommit):
     new_dict['SKIP_MET'] =get_file_meta(commit_dict['files'])
     new_dict['SKIP_COM'] =1 if any(word.lower() in commit_dict['commit']['message'] for word in list_comment) else 0
     new_dict['SKIP_FRM'] =1 if any(word.lower() in commit_dict['commit']['message'] for word in list_format) else 0
-    #new_dict['SKIP_BLD'] =0
+    new_dict['SKIP_BLD'] =1 if any(word.lower() in commit_dict['commit']['message'] for word in version_words) else 0
 
     new_dict['LABEL'] = int(('[ci skip]' in commit_dict['commit']['message'].lower()) or ('[skip ci]' in commit_dict['commit']['message'].lower()))
 
