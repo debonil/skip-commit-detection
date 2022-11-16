@@ -183,7 +183,7 @@ def map_to_df(commit_dict: GitCommit):
     ) in commit_dict['commit']['message'] for word in list_merge_words) else 0
     #new_dict['PURP_CFT'] =0
 
-    new_dict['HIST_NDEV'] = get_no_dev_change_files(commit_dict['files'])
+    #new_dict['HIST_NDEV'] = get_no_dev_change_files(commit_dict['files'])
     #new_dict['HIST_AGE'] =0
     #new_dict['HIST_NUC'] =0
 
@@ -209,6 +209,9 @@ def map_to_df(commit_dict: GitCommit):
 
 
 def preprocess_data(all_commits):
+    print(f'\t\t\t before all_commits length {len(all_commits)}')
+    all_commits = [x for x in all_commits if x.get('files')]
+    print(f'\t\t\t after all_commits length {len(all_commits)}')
     new_format = [map_to_df(cm) for cm in all_commits]
     x, featuere_name = get_text_tfidf(all_commits)
     new_format_df = pd.DataFrame(new_format)
