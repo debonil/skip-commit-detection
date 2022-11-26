@@ -7,6 +7,6 @@ def test_example():
 
 def test_basic_working():
     print("test_basic_working**")
-    data_prep.do()
+    print(data_prep.api_token)
     ml_training.do()
     assert 1 == 1
